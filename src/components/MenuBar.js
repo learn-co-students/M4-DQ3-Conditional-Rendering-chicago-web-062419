@@ -12,22 +12,36 @@ const MenuBar = (props) => {
   this component be made aware of what is currently the active menu item?
 
   */
+  // const handleClick = (event)=>{
+  //   event.target.className = "item active"
+  //   console.log(event.target.id)
+  // }
+  
+  const isClicked = (event) =>{
+    console.log(event)
+    if(props.page === event.target.id){
+      return "item active"
+    } else {
+      return "item"
+    }
+  }
 
   return (
+    
     <div className="ui four item menu">
-      <a className="item active" id="profile">
+      <a className="item" onClick={props.handleClick} id="profile">
         <i className="user large icon" id="profile"/>
       </a>
 
-      <a className="item" id="photo">
+      <a className="item" id="photo" onClick={props.handleClick}>
         <i className="photo large icon" id="photo"/>
       </a>
 
-      <a className="item" id="cocktail">
+      <a className="item" id="cocktail" onClick={props.handleClick}>
         <i className="cocktail large icon" id="cocktail"/>
       </a>
 
-      <a className="item" id="pokemon"> 
+      <a className="item" id="pokemon" onClick={props.handleClick}> 
         <i className=" themeisle large icon" id="pokemon"/>
       </a>
     </div>
