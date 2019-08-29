@@ -7,7 +7,7 @@ export const userData = {
 
 export const photo = {
 	title: "How Could You Do This?",
-	url: "https://media.giphy.com/media/hXafx5jj9HVBe/giphy.gif"
+	url: "https://picsum.photos/id/237/536/354"
 }
 
 export const cocktails = {
